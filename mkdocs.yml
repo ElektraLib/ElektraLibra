@@ -1,6 +1,9 @@
 site_name: ElektraLibra
-site_description: Elektronik komponentler için teknik bilgi kütüphanesi
+site_description: Elektronik komponentler icin teknik bilgi kutuphanesi
 site_author: ElektraLib
+site_url: https://elektralib.github.io/ElektraLibra/
+repo_url: https://github.com/ElektraLib/ElektraLibra
+repo_name: ElektraLib/ElektraLibra
 
 theme:
   name: material
@@ -11,17 +14,18 @@ theme:
       accent: indigo
       toggle:
         icon: material/weather-night
-        name: Karanlık moda geç
+        name: Karanlik moda gec
     - scheme: slate
       primary: blue
       accent: indigo
       toggle:
         icon: material/weather-sunny
-        name: Aydınlık moda geç
+        name: Aydinlik moda gec
   features:
     - navigation.tabs
     - navigation.sections
     - navigation.top
+    - navigation.indexes
     - search.highlight
     - search.suggest
     - content.code.copy
@@ -33,13 +37,21 @@ plugins:
 nav:
   - Ana Sayfa: index.md
   - Komponentler:
-      - Güç Yönetimi:
+      - Guc Yonetimi:
           - TPS5420D: components/tps5420d.md
 
 markdown_extensions:
   - admonition
+  - attr_list
+  - md_in_html
   - tables
   - toc:
       permalink: true
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
