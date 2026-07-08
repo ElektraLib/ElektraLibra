@@ -1,1 +1,45 @@
+site_name: ElektraLibra
+site_description: Elektronik komponentler için teknik bilgi kütüphanesi
+site_author: ElektraLib
 
+theme:
+  name: material
+  language: tr
+  palette:
+    - scheme: default
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Karanlık moda geç
+    - scheme: slate
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Aydınlık moda geç
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+
+plugins:
+  - search:
+      lang: tr
+
+nav:
+  - Ana Sayfa: index.md
+  - Komponentler:
+      - Güç Yönetimi:
+          - TPS5420D: components/tps5420d.md
+
+markdown_extensions:
+  - admonition
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
